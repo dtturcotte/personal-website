@@ -1,0 +1,78 @@
+@import './breaks.scss';
+@import './colors.scss';
+
+.header {
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+	background: rgba(0, 0, 0, 1);
+	.header-content {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		margin-top: 16px;
+		@include break(tabletmax) {
+			margin-top: 14px;
+		}
+		.name,
+		.nav-items-container {
+			display: inline-block;
+		}
+		.name {
+			flex: 1;
+			@include break(tabletmax) {
+				text-align: center;
+			}
+			a {
+				@include break(tabletmax) {
+					font-size: 18px;
+				}
+			}
+		}
+		.nav-items-container {
+			flex: 1;
+			@include break(tabletmax) {
+				width: 100%;
+				position: fixed;
+				left: 0;
+				top: 50px;
+				right: 0;
+				height: 40px;
+				text-align: center;
+				margin-left: 0;
+				background-color: rgba(0, 0, 0, 0.9);
+			}
+
+			.nav-items {
+				text-align: right;
+				justify-content: space-between;
+				display: flex;
+				@include break(tabletmax) {
+					width: 90%;
+					margin: 0 auto;
+					margin-top: 10px;
+				}
+				a {
+					@include break(handset) {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+		a {
+			color: white;
+			text-transform: uppercase;
+			&:hover {
+				color: #c3bfff;
+			}
+			&.active {
+				color: #a09dcb;
+			}
+		}
+	}
+}

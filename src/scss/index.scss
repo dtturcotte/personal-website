@@ -1,0 +1,71 @@
+@import './breaks.scss';
+@import './colors.scss';
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	@include break(tabletmax) {
+		font-size: 12px;
+	}
+}
+
+.code-block {
+	width: 50%;
+	text-align: left;
+	margin: 0 auto;
+	@include break(tabletmax) {
+		width: 80%;
+	}
+	img {
+		width: 150px;
+		display: inline;
+		@include break(tabletmax) {
+			width: 100px;
+		}
+	}
+}
+
+pre code {
+	font: 16px Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+	color: #52595d;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+	display: inline-block;
+	width: 100%;
+	padding: 20px 0px 20px 20px;
+	max-width: 450px;
+	span {
+		vertical-align: top;
+		margin-top: 34px;
+		display: inline-block;
+	}
+	@include break(tabletmax) {
+		padding-left: 24%;
+	}
+	@include break(handset) {
+		padding-left: 4%;
+	}
+}
+
+.blink_me {
+	animation: blinker 1.5s step-end infinite;
+	width: 4px;
+	height: 20px;
+	margin-top: 6px;
+	background: #545454;
+	float: right;
+	margin-left: 2px;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
