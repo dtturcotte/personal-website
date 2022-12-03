@@ -19,7 +19,7 @@ const ImagesModal = (props) => {
 							props.project.images.map((image, i) => {
 								return (
 									<div key={i}>
-										<img src={`../assets/project_images/bottledirect/${image.content}/${image.src}.png`} />
+										<img src={`../assets/project_images/${props.project.image}/${image.content}/${image.src}.png`} />
 										<i style={{ display: 'block', margin: '0 auto', marginTop: '10px' }} className={`fa-solid fa-${image.device}`}></i>
 									</div>
 								)

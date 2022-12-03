@@ -92,13 +92,25 @@ class Work extends React.Component {
 					description2: '',
 					action: '',
 					image: 'spywatchlex_dashboard',
-					link: 'https://v3-insights.spywatchlex.com',
-					modalType: null,
+					link: null,
+					modalType: 'images',
 					codepenHashes: [],
-					tags: ['angular', 'nodejs'],
+					tags: ['react', 'nodejs'],
 					github: 'private',
 					'background-color': '#f79f23',
 					color: 'white',
+					images: [
+						{
+							src: '1',
+							content: 'desktop',
+							device: 'desktop',
+						},
+						{
+							src: '2',
+							content: 'desktop',
+							device: 'desktop',
+						},
+					],
 				},
 				{
 					name: 'World Language Apps',
