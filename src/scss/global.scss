@@ -14,6 +14,10 @@
 		color: black;
 		background-color: #efefef;
 	}
+	&.light-to-dark-gradient {
+		color: black;
+		background-image: linear-gradient(to top, #191818, #4a494a, #828182, #bebebe, #ffffff);
+	}
 	&.dark {
 		color: white;
 		background-color: #191818;
@@ -32,7 +36,7 @@
 		background-color: #4b3d81;
 	}
 	&.game-image {
-		background-image: url('../../public/assets/in_world.jpg');
+		background-image: url('../../public/assets/site/in_world.jpg');
 		background-position: center center;
 		background-size: cover;
 		color: white;
@@ -44,7 +48,7 @@
 		}
 	}
 	&.chinese-image {
-		background-image: url('../../public/assets/cn_backdrop.png');
+		background-image: url('../../public/assets/site/cn_backdrop.png');
 		background-position: bottom center;
 		background-size: cover;
 		color: white;
@@ -104,7 +108,8 @@ p {
 				margin-top: 48px;
 			}
 			@include break(handset) {
-				margin-top: 40px;
+				margin-top: 25px;
+				margin-left: 16px;
 			}
 			a {
 				font-size: 22px;
@@ -363,6 +368,137 @@ a {
 					float: none;
 				}
 			}
+		}
+	}
+}
+
+.tiles {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.tile {
+		position: relative;
+		vertical-align: top;
+		height: 100%;
+		width: 20%;
+		margin: 18px;
+		background-color: #fff;
+		overflow: hidden;
+		color: white;
+		box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+		border-radius: 3px;
+		cursor: pointer;
+		@include break(tabletmax) {
+			width: 43%;
+			margin: 10px;
+		}
+		@include break(handset) {
+			width: 100%;
+			margin: 10px;
+		}
+		.info {
+			text-align: left;
+			position: absolute;
+			background-color: black;
+			height: 42px;
+			background-color: rgba(0, 0, 0, 0.8);
+			color: white;
+			z-index: 2;
+			width: 100%;
+			bottom: 0;
+			.title {
+				display: inline-block;
+				padding: 10px;
+				margin: 0;
+			}
+		}
+		.tile-thumbnail {
+			width: 100%;
+		}
+	}
+}
+
+.tags {
+	text-align: center;
+	.tag {
+		display: inline-block;
+		padding: 5px;
+		margin: 5px 5px 10px;
+		border-radius: 3px;
+		background-color: rgba(228, 225, 220, 0.7);
+		border: thin solid #c3c3c3;
+		transition: width 0.5s, height 0.5s, background-color 0.5s, color 0.5s, transform 0.5s;
+		cursor: pointer;
+		@include break(handset) {
+			padding: 3px;
+			margin: 2px 3px 5px;
+		}
+		&.tile-tag {
+			background-color: rgba(36, 36, 36, 0.7);
+			border: thin solid #151515;
+		}
+		span {
+			font-size: 16px;
+			margin-left: 10px;
+			vertical-align: top;
+			margin-top: 2px;
+			display: inline-block;
+			@include break(handset) {
+				font-size: 14px;
+				margin-top: 4px;
+			}
+		}
+		&:hover {
+			background-color: rgba(14, 14, 14, 0.7);
+		}
+		&.active {
+			background-color: rgba(81, 228, 77, 0.7);
+			border-color: #4abd2c;
+		}
+	}
+}
+
+.tag-icon {
+	width: 25px;
+	margin: 0 3px;
+}
+
+.icons {
+	img {
+		width: 25px;
+	}
+}
+
+.modal-images {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.tile-modal-image {
+		margin: 0 auto;
+		padding: 15px;
+		border-radius: 5px;
+		background-color: gainsboro;
+		width: 70%;
+		img {
+			width: 100%;
+		}
+	}
+	.project-modal-image {
+		margin: 20px;
+		padding: 15px;
+		border-radius: 5px;
+		background-color: gainsboro;
+		width: 40%;
+		@include break(tabletmax) {
+			width: 90%;
+			margin: 0;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+		img {
+			width: 100%;
 		}
 	}
 }

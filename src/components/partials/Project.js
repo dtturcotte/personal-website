@@ -11,7 +11,7 @@ function Project(props) {
 				<div className="tag-icons">
 					{props.tags.map((tag, i) => {
 						if (props.project.tags.includes(tag)) {
-							return <img className="tag-icon" key={i} src={`../assets/tags/${tag}.png`} />
+							return <img className="tag-icon" key={i} src={`../assets/projects/tags/${tag}.png`} />
 						}
 					})}
 				</div>
@@ -31,7 +31,7 @@ function Project(props) {
 					)}
 				</div>
 			</div>
-			<img className="project-thumbnail" src={`../assets/project_thumbnails/${props.project.image}.png`} />
+			<img className="project-thumbnail" src={`../assets/projects/thumbnails/${props.project.image}.png`} />
 		</motion.div>
 	)
 }

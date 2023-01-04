@@ -14,7 +14,7 @@ function Game(props) {
 						</h1>
 						<p>A game before anything else, with language learning at its core.</p>
 						<a href="https://ies.ed.gov/funding/grantsearch/details.asp?ID=4575" target="_blank">
-							<img className="sbir" src="../assets/sbir_logo.png" />
+							<img className="sbir" src="../assets/site/sbir_logo.png" />
 						</a>
 					</div>
 				</div>
@@ -25,11 +25,11 @@ function Game(props) {
 						<div className="content sm">
 							<p className="subheading">
 								<i>Spywatch Lex</i> is a federal{' '}
-								<a className="dark" href="https://ies.ed.gov/funding/grantsearch/details.asp?ID=4575" target="_blank">
-									<b>Small Business Innovation Research (SBIR) grant-winning</b>{' '}
+								<a className="dark" href="https://ies.ed.gov/funding/grantsearch/details.asp?ID=4575" target="_blank" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+									Small Business Innovation Research (SBIR) grant-winning{' '}
 								</a>
 								video game designed to make language learning more engaging and effective.{' '}
-								<a href="https://spywatchlex.com" target="_blank" className="dark" style={{ fontWeight: 'bold' }}>
+								<a href="https://spywatchlex.com" target="_blank" className="dark" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
 									Try It!
 								</a>
 							</p>
@@ -51,7 +51,7 @@ function Game(props) {
 						<>
 							<div className="content-blocks left-image">
 								<div className="content-block left">
-									<img src="../assets/in_game.png" />
+									<img src="../assets/site/in_game.png" />
 								</div>
 								<div className="content-block right">
 									<p>
@@ -62,7 +62,7 @@ function Game(props) {
 							</div>
 							<div className="content-blocks right-image">
 								<div className="content-block right">
-									<img src="../assets/beta_test_1.jpg" />
+									<img src="../assets/site/beta_test_1.jpg" />
 								</div>
 								<div className="content-block left">
 									<p>
@@ -74,7 +74,7 @@ function Game(props) {
 							</div>
 							<div className="content-blocks left-image">
 								<div className="content-block left">
-									<img src="../assets/beta_test_2.jpg" />
+									<img src="../assets/site/beta_test_2.jpg" />
 								</div>
 								<div className="content-block right">
 									<p>

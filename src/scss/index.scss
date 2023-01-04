@@ -26,7 +26,7 @@ code {
 		width: 150px;
 		display: inline;
 		@include break(tabletmax) {
-			width: 100px;
+			width: 85px;
 		}
 	}
 }
@@ -51,6 +51,7 @@ pre code {
 	}
 	@include break(handset) {
 		padding-left: 4%;
+		font-size: 14px;
 	}
 }
 

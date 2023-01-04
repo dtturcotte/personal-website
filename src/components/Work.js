@@ -341,7 +341,7 @@ class Work extends React.Component {
 							{this.state.tags.map((tag, index) => {
 								return (
 									<div className={`tag ${this.state.activeTags.find((t) => t === tag) ? 'active' : ''}`} key={index} onClick={() => this.tagClick(tag)}>
-										<img className="tag-icon" src={`../assets/tags/${tag}.png`} />
+										<img className="tag-icon" src={`../assets/projects/tags/${tag}.png`} />
 										<span>{tag}</span>
 									</div>
 								)
@@ -351,11 +351,11 @@ class Work extends React.Component {
 				</div>
 				<div className="container purple p-lg">
 					<div className="content">
-						<p className="heading center">Selected projects:</p>
+						<p className="heading center">Selected Projects</p>
 						<div className="projects">
 							{this.state.projects.map((project, index) => {
-								let intersection = project.tags.filter((tag) => this.state.activeTags.includes(tag))
-								if (index < this.state.projectsToShow && (this.state.activeTags.length <= 0 || intersection.length > 0)) {
+								let matchingTags = project.tags.filter((tag) => this.state.activeTags.includes(tag))
+								if ((this.state.activeTags.length > 0 && matchingTags.length > 0) || (this.state.activeTags.length <= 0 && index < this.state.projectsToShow)) {
 									return <Project project={project} key={index} tags={this.state.tags} projectClick={() => this.projectClick(project)} />
 								}
 							})}
@@ -365,10 +365,10 @@ class Work extends React.Component {
 						</button>
 					</div>
 					{this.state.selectedProject && this.state.selectedProject.modalType === 'codepen' && (
-						<CodepenModal isOpen={this.state.modalOpen} close={this.closeModal.bind(this)} project={this.state.selectedProject} />
+						<CodepenModal isOpen={this.state.modalOpen} close={this.closeModal.bind(this)} item={this.state.selectedProject} />
 					)}
 					{this.state.selectedProject && this.state.selectedProject.modalType === 'images' && (
-						<ImagesModal isOpen={this.state.modalOpen} close={this.closeModal.bind(this)} project={this.state.selectedProject} />
+						<ImagesModal isOpen={this.state.modalOpen} close={this.closeModal.bind(this)} item={this.state.selectedProject} type="projects" />
 					)}
 				</div>
 			</div>

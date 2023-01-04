@@ -6,17 +6,17 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
 
 const CodepenModal = (props) => {
-	if (!props.project) {
+	if (!props.item) {
 		return <div></div>
 	}
 	return (
 		<React.Fragment>
 			<Dialog fullWidth={true} maxWidth="100%" open={props.isOpen} onClose={props.close} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
-				<DialogTitle id="alert-dialog-title">{props.project.name}</DialogTitle>
+				<DialogTitle id="alert-dialog-title">{props.item.name}</DialogTitle>
 				<DialogContent>
-					{props.project.codepenHashes &&
-						props.project.codepenHashes.length > 0 &&
-						props.project.codepenHashes.map((codepenHash, index) => {
+					{props.item.codepenHashes &&
+						props.item.codepenHashes.length > 0 &&
+						props.item.codepenHashes.map((codepenHash, index) => {
 							return (
 								<div className="codepen" key={index}>
 									<iframe

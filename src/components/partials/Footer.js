@@ -28,7 +28,7 @@ class Footer extends React.Component {
 						</div>
 						<div className="react">
 							<p className="muted">Made with</p>
-							<img src="../../assets/tags/react.png" />
+							<img src="../../assets/projects/tags/react.png" />
 						</div>
 					</div>
 				</div>
