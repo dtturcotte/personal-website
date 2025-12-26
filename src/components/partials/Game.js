@@ -26,11 +26,14 @@ function Game(props) {
 							<p className="subheading">
 								<i>Spywatch Lex</i> is a federal{' '}
 								<a className="dark" href="https://ies.ed.gov/funding/grantsearch/details.asp?ID=4575" target="_blank" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-									Small Business Innovation Research (SBIR) grant-winning{' '}
-								</a>
+									Small Business Innovation Research (SBIR) grant-winning
+								</a>{' '}
 								video game designed to make language learning more engaging and effective.{' '}
-								<a href="https://spywatchlex.com" target="_blank" className="dark" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+								{/* <a href="https://spywatchlex.com" target="_blank" className="dark" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
 									Try It!
+								</a> */}
+								<a href="mailto:dan@scholarcade.com" target="_blank" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+									Email me to try it!
 								</a>
 							</p>
 						</div>
@@ -80,10 +83,12 @@ function Game(props) {
 									<p>
 										Developing <i>Spywatch Lex</i> has been an amazing experience that taught me about iterative design, validation, and usability testing.
 									</p>
-									<p>Interested in learning? Give it a go! 加油 (Good luck!)</p>
-									<a href="https://spywatchlex.com" target="_blank">
-										<button className="buttons black-border">Try It!</button>
+									<a href="mailto:dan@scholarcade.com" target="_blank" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+										<b>Email me to try it!</b>
 									</a>
+									{/* <a href="https://spywatchlex.com" target="_blank">
+										<button className="buttons black-border">Try It!</button>
+									</a> */}
 								</div>
 							</div>
 						</>

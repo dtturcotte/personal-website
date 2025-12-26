@@ -207,7 +207,8 @@ a {
 	}
 	&.gradient {
 		background: none;
-		background-image: linear-gradient(to right, #191818, rgba(0, 0, 0, 0) 30%);
+		background-image: linear-gradient(to right, #191818 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #191818 100%);
+
 		@include break(tabletmax) {
 			background-image: linear-gradient(to right, #141414, rgba(0, 0, 0, 0.6) 50%);
 		}
@@ -481,6 +482,7 @@ a {
 		border-radius: 5px;
 		background-color: gainsboro;
 		width: 70%;
+		max-width: 600px;
 		img {
 			width: 100%;
 		}

@@ -14,6 +14,12 @@ class Home extends React.Component {
 			tags: ['acrylic on canvas', 'sketch', 'digitally hand-drawn', '3D', 'vector', 'progression'],
 			tiles: [
 				{
+					name: `Jinjo`,
+					image: 'Jinjo',
+					description1: `Dec '25, my girlfriend's Christmas gift of her favorite cat`,
+					tags: ['acrylic on canvas'],
+				},
+				{
 					name: `Lois Circle`,
 					image: 'Lois Circle',
 					description1: `Feb '22`,
@@ -22,7 +28,7 @@ class Home extends React.Component {
 				{
 					name: `Jaz`,
 					image: 'Jaz',
-					description1: `Sep '22, Mom's Birthday Gift of Her Favorite Dog`,
+					description1: `Sep '22, my mom's birthday gift of her favorite dog`,
 					tags: ['acrylic on canvas'],
 				},
 				{
@@ -76,7 +82,7 @@ class Home extends React.Component {
 				{
 					name: `Laura`,
 					image: 'Laura',
-					description1: `Good friend of mine from childhood`,
+					description1: `Old high school friend`,
 					tags: ['digitally hand-drawn'],
 				},
 				{
@@ -180,6 +186,12 @@ class Home extends React.Component {
 					image: 'Dodge This',
 					description1: ``,
 					tags: ['3D'],
+				},
+				{
+					name: `Jinjo Process`,
+					image: 'Jinjo Process',
+					description1: ``,
+					tags: ['progression'],
 				},
 				{
 					name: `AL Process`,
@@ -301,7 +313,15 @@ class Home extends React.Component {
 					</div>
 					<div className="half">
 						<div className="overlay gradient"></div>
-						<img style={{ width: '100%', position: 'absolute', bottom: '0px' }} src="../assets/site/shanghai.jpg" />
+						<img
+							style={{
+								width: '100%',
+								height: '100%',
+								objectFit: 'cover',
+								objectPosition: 'center 75%',
+							}}
+							src="../assets/site/shanghai.jpg"
+						/>
 					</div>
 				</div>
 				<div className="container p-lg monospace">
@@ -335,6 +355,8 @@ class Home extends React.Component {
 				<div className="container purple p-lg">
 					<div className="content">
 						<p className="heading center">Selected Artwork</p>
+						<p className="center">Painting helps me unwind after a day of coding. Check out some of my work here:</p>
+						<br />
 						<div className="tags">
 							{this.state.tags.map((tag, index) => {
 								return (
@@ -385,11 +407,11 @@ class Home extends React.Component {
 								</p>
 								<p>
 									Pictured here, I was honored to join a group of 20 high schools students through{' '}
-									<a href="http://jaconn.org/ja-goes-china/" target="_blank" className="dark">
+									<a href="http://jaconn.org/ja-goes-china/" target="_blank" className="dark" style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
 										Junior Achievement
-									</a>
-									as their teacher and mentor while they created mock trading companies in Beijing. An experience I will never forget!{' '}
-									<a href="http://jainchina.blogspot.com/" target="_blank" style={{ display: 'block' }}>
+									</a>{' '}
+									as their teacher and mentor while they created mock trading companies in Beijing. An experience I will never forget! <br />
+									<a href="http://jainchina.blogspot.com/" target="_blank" style={{ display: 'inline-block' }}>
 										<button className="buttons black-border">Read More!</button>
 									</a>
 								</p>
